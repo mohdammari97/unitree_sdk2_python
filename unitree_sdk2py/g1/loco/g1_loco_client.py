@@ -125,3 +125,30 @@ class LocoClient(Client):
             self.first_shake_hand_stage_ = not self.first_shake_hand_stage_
             return self.SetTaskId(3 if self.first_shake_hand_stage_ else 2)
     
+# --get_fsm_id           : Get the current FSM (Finite State Machine) ID of the upper controller
+# --get_fsm_mode         : Get the current FSM mode of the upper controller
+# --get_phase            : Get the current phase of the robot's movement cycle
+
+# --set_fsm_id 1         : Set the FSM state (e.g., to initiate a motion behavior)
+
+# --set_velocity         : Set movement speed [vx vy omega duration]
+#                          Example: "0.5 0 0 1" → forward 0.5 m/s for 1 sec
+
+# Basic Motion Commands
+# --damp                 : Enter damping mode (resist motion softly)
+# --start                : Enter main movement control (enables motion system)
+# --squat                : Lower into squat position
+# --sit                  : Sit down
+# --stand_up            : Stand up to default posture
+# --zero_torque          : Enter zero-torque mode (motors off)
+# --stop_move            : Stop current movement
+# --high_stand           : Stand tall
+# --low_stand            : Stand lower
+# --balance_stand        : Stand with balance control activated
+
+# Advanced Gait Options
+# --continous_gait true  : Enable continuous gait mode
+# --switch_move_mode true: Switch between different movement modes
+# --move                 : Move at specific velocity [vx vy omega]
+#                          Example: "0.5 0 0" → walk forward
+# --set_speed_mode N     : Set maximum speed mode: 0 / 1 / 2 / 3
