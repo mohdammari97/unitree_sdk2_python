@@ -73,7 +73,7 @@ if __name__ == "__main__":
     user_interface = UserInterface()
     user_interface.test_option_ = test_option
 
-    sport_client = LocoClient()  
+    sport_client = LocoClient()  #Consider adding the Start() method somewhere in the code to start the client (as mentioned in https://robonomics.network/blog/first-two-weeks-with-unitree-humanoid-robot/)
     sport_client.SetTimeout(10.0)
     sport_client.Init()
 
